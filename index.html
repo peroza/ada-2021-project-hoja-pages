@@ -82,8 +82,8 @@
 
 	<!-- SECTION 1 -->
 			<div class="container-fluid">
-				<h1 class="display-3">  What do we die of? </h1>
 				<h1 id="section1"> </h1>
+				<h1 class="display-3">  What do we die of? </h1>
 				 
 				<p>
 					Here, we explore the amazing data that was used in an article published in <a href="https://ourworldindata.org/causes-of-death">Our World in Data</a>, containing 
@@ -234,8 +234,8 @@
 
 	<!-- SECTION 2 -->
 			<div class="container-fluid">
-				<h1 class="display-3">  Which death causes receive the most attention? </h1>
 				<h1 id="section2"> </h1>
+				<h1 class="display-3">  Which death causes receive the most attention? </h1>
 				<p>
 					The key source of data used to identify media attention is <a href="https://zenodo.org/record/4277311#.Ybi-VL3MKMo">Quotebank</a>. This is an open dataset of 178 million unique quotations, extracted 
 					from 196 million English news articles crawled from over 377 thousand web domains, with data between 2008 and 2020. By identifying and 
@@ -260,7 +260,6 @@
 		<!-- TABLE OF QUOTE EXAMPLES -->	
 			<div class="container-fluid">
 				<table class="table table-dark table-striped table-hover caption-top">
-					<caption>Some Caption</caption>
 					<thead>
 					  <tr>
 						<th scope="col">Death cause</th>
@@ -537,9 +536,9 @@
 
 	<!-- SECTION 3 -->
 			<div class="container-fluid">
-				<h1 class="display-3">  Where are the asymmetries?</h1>
 				<h1 id="section3"> </h1>
-				
+				<h1 class="display-3">  Where are the asymmetries?</h1>
+	
 				<p>
 					The Figure below displays the number of quotes per million death, plotted on a log scale and sorted from high to low. 
 			</div>
@@ -563,8 +562,10 @@
 
 	<!-- SECTION 4 -->
 			<div class="container-fluid">
-				<h1 class="display-3">  Do preventable causes receive more attention?</h1>
 				<h1 id="section4"> </h1>
+
+				<h1 class="display-3">  Do preventable causes receive more attention?</h1>
+				
 					<!-- RQ1 HENRIK's PLOT -->	
 				<div class="container-fluid">
 					<img src="images/RQ5_plot.jpg" class="rounded mx-auto d-block" style="max-width: 100%;" alt="Percentage of deaths by category">
@@ -581,19 +582,20 @@
 				</p>
 			</div>
 
-	<!-- SECTION 5 - RQ2 -->
-	<div class="container-fluid">
-		<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
-		<h1 id="section5"> </h1>
-		<p>
-			<br>
-			Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
-			The figure below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of 
-			quotes captured per year.
-		</p>
-	</div>
+	
+		<!-- SECTION 5 - RQ2 -->
+		<div class="container-fluid">
+			<h1 id="section5"> </h1>
+			<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
+			<p>
+				<br>
+				Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
+				The figures below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of 
+				quotes captured per year.
+			</p>
+		</div>
 
-<!-- CAROUSEL RQ2 COMM & NON-COMM -->
+		<!-- CAROUSEL RQ2 COMM & NON-COMM -->
 		<div class="container-fluid">
 			<div id="carouselExampleDark3" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
 				<div class="carousel-inner">
@@ -626,18 +628,6 @@
 			</div>
 		</div>	
 
-	
-		<!-- CONCLUSION SECTION -->
-		<div class="container-fluid">
-			<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
-			<h1 id="section5"> </h1>
-			<p>
-				<br>
-				Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
-				The figures below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of 
-				quotes captured per year.
-			</p>
-		</div>
 
 		<div class="container-fluid">
 			<p>
@@ -649,10 +639,44 @@
 			</p>
 		</div>
 
+
+		<!-- CAROUSEL RQ2 SPECIFICS-->
+				<div class="container-fluid">
+					<div id="carouselExampleDark4" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<!-- change timer TODO -->
+							<div class="carousel-item active" data-bs-interval="1000">
+									<img src="images/double_line_Communicable diseases.png" class="rounded mx-auto d-block img-thumbnail" style="border: 0px solid #dee2e6" alt="Communicable diseases">
+									<div class="carousel-caption d-none d-md-block" style="bottom: -1rem;">
+									</div>
+							</div>
+							<div class="carousel-item" data-bs-interval="2000">
+									<img src="images/double_line_Non-communicable diseases.png" class="rounded mx-auto d-block img-thumbnail" style="border: 0px solid #dee2e6"  alt="Non-communicable diseases">
+									<div class="carousel-caption d-none d-md-block" style="bottom: -1rem;">
+									</div>
+							</div>
+							<div class="carousel-item">
+									<img src="images/double_line_Injuries.png" class="rounded mx-auto d-block img-thumbnail" style="border: 0px solid #dee2e6" alt="Injuries">
+									<div class="carousel-caption d-none d-md-block" style="bottom: -1rem;">
+									</div>
+							</div>
+						</div>
+		
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark4" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark4" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>	
+
 	<!-- CONCLUSION SECTION -->
 		<div class="container-fluid">
-			<h1 class="display-3">  Conclusions</h1>
 			<h1 id="section6"> </h1>
+			<h1 class="display-3">  Conclusions</h1>
 			
 			<p>
 				Conclusion?
