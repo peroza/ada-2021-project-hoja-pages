@@ -29,10 +29,10 @@
 	          				<a class="nav-link" href="#section3">Where are the asymmetries?</a>
 	        			</li>
 	        			<li class="nav-item">
-	          				<a class="nav-link" href="#section4">Does media attention grow or decrease with the death toll?</a>
+	          				<a class="nav-link" href="#section4">Do preventable causes receive more attention?</a>
 	        			</li>  
 						<li class="nav-item">
-							<a class="nav-link" href="#section5">Do preventable causes receive more attention?</a>
+							<a class="nav-link" href="#section5">Does media attention grow or decrease with the death toll?</a>
 					    </li>   
 						<li class="nav-item">
 							<a class="nav-link" href="#section6">Conclusion</a>
@@ -275,7 +275,7 @@
 					  </tr>
 					  <tr>
 						<th scope="row">Neoplasms</th>
-						<td> When cancer touches your family or friends you want to do what you can to help</td>
+						<td> When cancer touches your family or friends you want to do what you can to help.</td>
 					  </tr>
 					  <tr>
 						<th scope="row">Terrorism</th>
@@ -291,7 +291,13 @@
 					Next, we investigate where in the world the quotes from Quotebank originates from. This is done by extracting 
 
 					<br> 
-					TEXT ABOUT THE WORLD MAP
+					In order to identify when a certain quote mentions a particular death, we first created manually a list of keywords 
+					related to the topics of the Our World in Data. Next, we expanded these keywords by looking for aliases on Wikidata 
+					and finding synonyms using Wordnet. After identification of quotes in the dataset and grouping them in the topics, 
+					we saw that some topics had quotes which we’re obviously not about the topic we wanted. For example, the topic poisoning 
+					contained quotes about water being poisoned with lead, but also about the political debate being poisoned. To filter out 
+					the latter type of quotes, we performed clustering on the quotes and kept only those clusters which were about the intended
+					topic.
 					<br> 
 				</p>
 
@@ -444,25 +450,10 @@
 
 			<div class="container-fluid">
 				<p>
-					<br> 
 					<br>
-					The pie charts below shows the share of a certain death cause mentioned of the total quotes concerning a death cause.
-					It is evident that it differs from the actual death toll, as none of the top causes of death are mentioned, with the 
-					exception of neoplasms. Rather, the most talked about issue is war and terrorism, accounting for almost a fourth of the 
-					attention. Exposure to forces of nature, including weather and natural disasters, accounts for about a third. The other 
-					most talked about issues include road injuries, suicide, interpersonal violance, and finally neoplasms. 
+					World map of where the URL or the speaker of the quote is from. The scale is logarithmic, so the countries are grouped 
+					from 10^0 to 10^1 quotes up to 10^5 to 10^6 quotes, as can be seen in the legend.
 					<br> 
-					<br> 
-					FILLED LINE PLOT
-					<br> 
-					<br> 
-					COMMENTS ON FILLED LINE PLOT: DO ATTENTION FLUCTUATE A LOT BETWEEN DIFFERENT YEARS?
-					<br> 
-					<br> 
-					DIFFERENT COUNTRIES QUOTEBANK vs ACTUAL PLOTS 
-					<br> 
-					<br> 
-					COMMENTS
 				</p>
 			</div>
 
@@ -541,17 +532,6 @@
 					attention. Exposure to forces of nature, including weather and natural disasters, accounts for about a third. The other 
 					most talked about issues include road injuries, suicide, interpersonal violance, and finally neoplasms. 
 					<br> 
-					<br> 
-					FILLED LINE PLOT
-					<br> 
-					<br> 
-					COMMENTS ON FILLED LINE PLOT: DO ATTENTION FLUCTUATE A LOT BETWEEN DIFFERENT YEARS?
-					<br> 
-					<br> 
-					DIFFERENT COUNTRIES QUOTEBANK vs ACTUAL PLOTS 
-					<br> 
-					<br> 
-					COMMENTS
 				</p>
 			</div>
 
@@ -581,20 +561,39 @@
 				</p>
 			</div>
 
-	<!-- SECTION 4 - RQ2 -->
+	<!-- SECTION 4 -->
 			<div class="container-fluid">
-				<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
+				<h1 class="display-3">  Do preventable causes receive more attention?</h1>
 				<h1 id="section4"> </h1>
+					<!-- RQ1 HENRIK's PLOT -->	
+				<div class="container-fluid">
+					<img src="images/RQ5_plot.jpg" class="rounded mx-auto d-block" style="max-width: 100%;" alt="Percentage of deaths by category">
+				</div>
 				<p>
 					<br>
-					Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
-					<br> 
-					<br> 
-					The figure below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of quotes captured per year.
+					When we group the death causes by our three categories, we see a significant asymmetry between the quote and death data. 
+					Generally, injuries are more spoken about than communicable and non-communicable diseases. One possible explanation for 
+					this is that injuries happen spontaneously and are more interesting for the news to write about. For example, malaria deaths 
+					have occurred for a long time without any drastic changes and will receive less attention than e.g., a terrorist attack. 
+					Another explanation for this asymmetry is that the issues grouped in injuries sometimes are written about for reasons other 
+					than death and suffering. For example, wars, as previously discussed, are also written about because of power struggles. 
+					Our quote data is mainly from wealthy developed countries, which also might contribute to this asymmetry.
 				</p>
 			</div>
 
-	<!-- CAROUSEL RQ2 COMM & NON-COMM -->
+	<!-- SECTION 5 - RQ2 -->
+	<div class="container-fluid">
+		<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
+		<h1 id="section5"> </h1>
+		<p>
+			<br>
+			Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
+			The figure below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of 
+			quotes captured per year.
+		</p>
+	</div>
+
+<!-- CAROUSEL RQ2 COMM & NON-COMM -->
 		<div class="container-fluid">
 			<div id="carouselExampleDark3" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
 				<div class="carousel-inner">
@@ -627,24 +626,18 @@
 			</div>
 		</div>	
 
-	<!-- SECTION 5 -->
-			<div class="container-fluid">
-				<h1 class="display-3">  Do preventable causes receive more attention?</h1>
-				<h1 id="section5"> </h1>
-				
-				<p>
-					<br>
-					When we group the death causes by our three categories, we see a significant asymmetry between the quote and death data. 
-					Generally, injuries are more spoken about than communicable and non-communicable diseases. One possible explanation for 
-					this is that injuries happen spontaneously and are more interesting for the news to write about. For example, malaria deaths 
-					have occurred for a long time without any drastic changes and will receive less attention than e.g., a terrorist attack. 
-					Another explanation for this asymmetry is that the issues grouped in injuries sometimes are written about for reasons other 
-					than death and suffering. For example, wars, as previously discussed, are also written about because of power struggles. 
-					Our quote data is mainly from wealthy developed countries, which also might contribute to this asymmetry.
-				</p>
-			</div>
-
-
+	
+		<!-- CONCLUSION SECTION -->
+		<div class="container-fluid">
+			<h1 class="display-3">  Does media attention grow or decrease with the death toll?</h1>
+			<h1 id="section5"> </h1>
+			<p>
+				<br>
+				Next, we look at the degree of which the rise or fall of the death toll of a certain topic affect the media's attention to that cause. 
+				The figure below show line plots of the death toll of injuries, communicable and non-communicable diseases, together with the amount of 
+				quotes captured per year.
+			</p>
+		</div>
 
 	<!-- CONCLUSION SECTION -->
 		<div class="container-fluid">
